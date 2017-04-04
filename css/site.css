@@ -1,4 +1,7 @@
- *,::before,::after{
+@charset "utf-8";
+/* CSS Document By zlsoftdq 2017.4.4*/
+
+*,::before,::after{
     padding:0;
     margin:0;
     -webkit-tap-highlight-color:transparent;
@@ -14,6 +17,26 @@ body{
   margin:0 auto;
   padding:0;
   background-color: #f2f2f2;
+}
+ol,ul,li{
+  list-style:none;
+  vertical-align:top;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
 }
 a{
   text-decoration:none;
@@ -57,13 +80,107 @@ a{
 .div_middle{
   margin: 0;
   padding: 0 auto;
-  z-index: 999;
+  z-index: 890;
   position:absolute;
   width: 825px;
   height:500px;
   left: 50%;
   top: 360px;
   margin-left: -412.5px;
+  overflow: hidden;
+}
+.div_middle>.hd{
+  background: #000 none repeat scroll 0 0;
+  border-radius: 30px;
+  bottom: 15px;
+  overflow: hidden;
+  padding: 4px 10px;
+  position: absolute;
+  right: 40px;
+  text-align: center;
+  z-index: 900;
+}
+.div_middle>.hd>ul{
+  overflow:hidden;
+  zoom:1;
+  float:left;
+}
+.div_middle>.hd>ul>li{
+  background: #919090 none repeat scroll 0 0;
+  border: 2px solid #626262;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-size: 0;
+  height: 10px;
+  line-height: 0;
+  margin: 0 3px;
+  width: 10px;
+}
+.div_middle>.hd>ul>li.on{
+  background:#fff;
+  border-color:#aaa;
+}
+.div_middle>.bd{
+  margin: 0;
+  padding: 0;
+  width: 825px;
+  height:500px;
+  overflow: hidden;
+}
+.div_middle>.bd>.bannner_product{
+  width:6600px;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style:none;
+}
+.div_middle>.bd>.bannner_product>li{
+  width:825px;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  float: left;
+  list-style:none;
+}
+.div_middle>.prev,
+.div_middle>.next{
+  display:none;
+  filter:alpha(opacity=30);opacity:0.3;
+  background: #000 none repeat scroll 0 0;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  height: 73px;
+  opacity: 0.3;
+  overflow: hidden;
+  width: 43px;
+  margin-top: -35px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  z-index: 940;
+}
+.div_middle>.prev{
+  left: 0px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.div_middle>.prev:hover,
+.div_middle>.next:hover{
+  filter:alpha(opacity=70);
+  opacity:0.7;
+}
+.div_middle>.prevStop{
+  display:none;
+}
+.div_middle>.nextStop{
+  display:none;
 }
 .div_down{
   width: 100%;
