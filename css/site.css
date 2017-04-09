@@ -58,6 +58,14 @@ a{
   padding:0;
   background:url('../images/header.png') no-repeat 0 0;
 }
+.div_up>.logoen{
+  display: block;
+  height:200px;
+  width: 600px;
+  margin: 0 auto;
+  padding:0;
+  background:url('../images/header.png') no-repeat 0 0;
+}
 .div_up>.download{
   margin: 0 auto;
   display: block;
